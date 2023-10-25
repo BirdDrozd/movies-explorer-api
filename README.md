@@ -17,7 +17,7 @@ Backend for Yandex Praktikum diploma project
 
 **IP 158.160.112.23** 
 
-**Backend:** https://api.moviesearch.nomoredomainsrocks.ru 
+**Backend:** https://moviesearch.nomoredomainsrocks.ru 
 ## Директории
 
 `/routes` — папка с файлами роутера  
@@ -52,7 +52,7 @@ Repository address: https://github.com/BirdDrozd/movies-explorer-api
 
 **IP 158.160.112.23** 
 
-**Backend:** https://api.moviesearch.nomoredomainsrocks.ru 
+**Backend:** https://moviesearch.nomoredomainsrocks.ru 
 
 ## Directories
 
