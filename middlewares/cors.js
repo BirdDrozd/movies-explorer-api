@@ -1,9 +1,9 @@
 const allowedCors = [
   'http://localhost:3001',
   'https://localhost:3001',
-  'http://interactiveservice.nomoredomainsrocks.ru',
-  'https://interactiveservice.nomoredomainsrocks.ru',
-  'https://api.interactiveservice.nomoredomainsrocks.ru'
+  'http://moviesearch.nomoredomainsrocks.ru',
+  'https://moviesearch.nomoredomainsrocks.ru',
+  'https://api.moviesearch.nomoredomainsrocks.ru'
 ];
 
 module.exports = (req, res, next) => {
