@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+const cors = require('./middlewares/cors');
 const router = require('./routes/index');
 const errorHandler = require('./middlewares/error-handler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -24,10 +24,7 @@ const {
 app.use(helmet());
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(cors({
-  origin: 'https://moviesearch.nomoredomainsrocks.ru',
-  credentials: true,
-}));
+app.use(cors);
 
 mongoose.connect(NODE_ENV === 'production' ? SERVER_ADDRESS : 'mongodb://127.0.0.1:27017/bitfilmsdb', { autoIndex: true })
   .then(() => {
