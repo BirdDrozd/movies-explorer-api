@@ -25,7 +25,7 @@ const updateProfileValidate = celebrate({
 
 const deleteMovieValidate = celebrate({
   params: Joi.object().keys({
-    moviesId: Joi.string().required().length(24).hex(),
+    movieId: Joi.string().required().length(24).hex(),
   }),
 });
 
@@ -40,7 +40,7 @@ const createMovieValidate = celebrate({
     trailerLink: Joi.string().pattern(urlPattern).required(),
     thumbnail: Joi.string().pattern(urlPattern).required(),
     owner: Joi.string().length(24).hex(),
-    moviesId: Joi.number().unsafe().required(),
+    movieId: Joi.number().unsafe().required(),
     nameRU: Joi.string().required().min(2),
     nameEN: Joi.string().required().min(2),
   }),

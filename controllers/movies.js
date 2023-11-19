@@ -16,7 +16,7 @@ const createMovie = (req, res, next) => {
     image,
     trailerLink,
     thumbnail,
-    moviesId,
+    movieId,
     nameRU,
     nameEN,
   } = req.body;
@@ -31,7 +31,7 @@ const createMovie = (req, res, next) => {
     trailerLink,
     thumbnail,
     owner: req.user.id,
-    moviesId,
+    movieId,
     nameRU,
     nameEN,
   })
@@ -56,7 +56,7 @@ const getSavedMovies = (req, res, next) => {
 };
 
 const deleteMovie = (req, res, next) => {
-  return Movie.findById(req.params.moviesId).then(
+  return Movie.findById(req.params.movieId).then(
     (movie) => {
       if (!movie) {
         next(new NotFoundError('Фильм не найден.'));
