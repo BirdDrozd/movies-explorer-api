@@ -6,8 +6,6 @@ const {
 
 router.get('/', getSavedMovies);
 
-router.get('/movies', getMovies);
-
 router.post('/', createMovieValidate, createMovie);
 
 router.delete('/:movieId', deleteMovieValidate, deleteMovie);
