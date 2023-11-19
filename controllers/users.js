@@ -63,7 +63,7 @@ const login = (req, res, next) => {
           if (!isPasswordMatch) {
             return Promise.reject(new NotAuthorizedError('Вы ввели неправильный логин или пароль.'));
           }
-          const token = jwt.sign({ id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key', { expiresIn: '1w' });
+          const token = jwt.sign({ id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'supersecretstring', { expiresIn: '1w' });
           res.cookie('token', token, {
             maxAge: 3600000 * 24 * 7,
             httpOnly: true,

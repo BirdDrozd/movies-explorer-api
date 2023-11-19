@@ -4,7 +4,6 @@ const { NotAuthorizedError } = require('../errors/NotAuthorizedError');
 const JWT_SECRET = process.env.JWT_SECRET || (process.env.NODE_ENV !== 'production' ? 'supersecretstring' : '');
 
 const auth = (req, res, next) => {
-  console.log(req.cookies)
   const { token = null } = req.cookies;
 
   if (!token) {
