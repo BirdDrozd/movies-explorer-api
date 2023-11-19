@@ -37,6 +37,10 @@ app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'path-to-your-index-html'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running at port ${PORT}`);
 });
